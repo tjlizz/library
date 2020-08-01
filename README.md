@@ -1,5 +1,15 @@
-# 工具类介绍
-## DateUtil
+
+# library
+## Maven
+```xml
+   <dependency>
+      <groupId>com.github.lizeze</groupId>
+      <artifactId>library</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+```
+## 工具类介绍
+### DateUtil
 * getCurrentDate()，获取当期日志，只包含日期
 * calcIntervalDays(Date date1, Date date2)，计算两个日期间隔的天数
 * dayOfWeek(Date date)，返回data对应的是星期几

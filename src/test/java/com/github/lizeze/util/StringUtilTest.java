@@ -17,7 +17,11 @@ public class StringUtilTest {
     @Test
     public void isEmptyOrNull() {
 
-        assertTrue(StringUtil.isEmptyOrNull(""));
+        assertTrue(StringUtil.isEmptyOrNull("2") == false);
     }
 
+    @Test
+    public void appendZero() {
+        assertTrue(StringUtil.appendZero("1", 3).equals("001"));
+    }
 }
