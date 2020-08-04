@@ -12,6 +12,11 @@ import javax.validation.ConstraintValidatorContext;
  */
 public class NotEmptyValidator implements ConstraintValidator<NotEmpty, Object> {
     @Override
+    public void initialize(NotEmpty notEmpty) {
+
+    }
+
+    @Override
     public boolean isValid(Object s, ConstraintValidatorContext constraintValidatorContext) {
 
         return true;
