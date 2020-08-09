@@ -369,4 +369,18 @@ public class DateUtil {
         todayStart.set(Calendar.MILLISECOND, 999);
         return todayStart.getTime();
     }
+
+    /**
+     * 当前时间增加若干秒
+     *
+     * @param seconds 增加的秒
+     * @return 增加后的日期
+     */
+    public static Date addSeconds(Integer seconds) {
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.add(Calendar.SECOND, seconds);
+        return calendar.getTime();
+    }
 }
