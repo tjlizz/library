@@ -103,7 +103,10 @@ public class ActionRightvalidator {
         Method method = ((MethodSignature) proceedingJoinPoint.getSignature()).getMethod();
         ActionRight visitPermission = method.getAnnotation(ActionRight.class);
         String value = visitPermission.actionCode();
-        if (!map.containsKey(value)) throw new ForbiddenException(4003);
+        Boolean require = visitPermission.require();
+        if (require) {
+            if (!map.containsKey(value)) throw new ForbiddenException(4003);
+        }
         // 校验权限的业务逻辑
         // List<Object> permissions = redis.get(permission)
         // db.getPermission

@@ -17,5 +17,7 @@ public @interface ActionRight {
 
     String actionCode() default " ";
 
+    boolean require() default true;
+
 
 }
